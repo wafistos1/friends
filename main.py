@@ -9,20 +9,21 @@ import os
 import re
 from selenium.webdriver.common.action_chains import ActionChains
 from random import randint
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from package.subscene import get_subtitle_opensub
 
-options = webdriver.ChromeOptions()
 
+
+options = webdriver.ChromeOptions()
 options.add_experimental_option("prefs", {
-  "download.default_directory": r"/home/wafi/Downloads/toto",
+  "download.default_directory": r"/home/wafi/Downloads/toto",# link of Download files
   "download.directory_upgrade":True,
   "safebrowsing.enabled":True,
   "download.prompt_for_download":False,
 })
 driver=webdriver.Chrome(options=options)
+#driver = webdriver.Chrome(chrome_options=options, executable_path=r'C:\WebDrivers\ChromeDriver\chromedriver_win32\chromedriver.exe')
 
 
 print('**************************************************')
